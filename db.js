@@ -1,12 +1,14 @@
-// importa a classe Sequelize
+// importar Sequelize
 import { Sequelize } from "sequelize";
+
+// pesquisar o que é 
 import dotenv from 'dotenv';
 
 dotenv.config();
-// Cria uma nova instância de conexão com o banco de dados
+// Cria uma nova conexão com o banco de dados
 const db = new Sequelize(
     process.env.DB_NAME, // nome do banco 
-    process.env.DB_USER, // Usuário administrador do banco
+    process.env.DB_USER, // Usuário administrador(dono) do banco
     process.env.DB_PASS,// senha do banco
     {
         host: process.env.DB_HOST, // onde o banco está (endereço)
@@ -27,6 +29,4 @@ db.authenticate().then((function(){
 
 export default db;
 
-  
-
-
+// versão desatualizada, por favor a atualize!
